@@ -14,7 +14,7 @@
 .mediPlayer {
   display: block;
   cursor: pointer;
-  z-index: 999999999999999999999999999;
+  z-index: 3;
   position: fixed;
   right: 50px;
   bottom: 50px
