@@ -126,8 +126,8 @@ function showMenu2(open_id, close_id) {
   y.classList.add("hide");
 }
 
-function close_modal(modal_id) {
-  const url = 'https://waping.rocot.xyz/update/close/modal';
+function close_modal(modal_id, store_id) {
+  const url = `https://${store_id}.rocat.xyz/update/close/modal`;
   var obj = new Object();
   obj.modal_id = modal_id;
   var json_data = JSON.stringify(obj);
