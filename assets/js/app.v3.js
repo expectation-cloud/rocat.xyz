@@ -16,12 +16,8 @@ function pw_Length(value) {
   return value.length >= 8
 }
 
-function id_check (str) {
-  return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!#?&_.\-=]*$/.test(str);
-}
-
-function pw_check (str) {
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!#?&_.\-=])[A-Za-z\d@$!#?&_.\-=]+$/.test(str);
+function id_check(str) {
+  return /^[A-Za-z0-9._]+$/.test(str);
 }
 
 function isMatch (password1, password2) {
@@ -36,7 +32,6 @@ let Id_FailureMessageTwo = document.querySelector('.id_error2');
 let InputPassword = document.querySelector('#password');
 let InputPasswordRetype = document.querySelector('#password-retype');
 let Pw_FailureMessage = document.querySelector('.password_error');
-let Pw_FailureMessageTwo = document.querySelector('.password_error2');
 let MismatchMessage = document.querySelector('.retype-pw');
 
 InputUsername.onkeyup = function () {
@@ -64,20 +59,13 @@ InputPassword.onkeyup = function () {
   if (InputPassword.value.length !== 0) {
     if(pw_Length(InputPassword.value) === false) {
       Pw_FailureMessage.classList.remove('hide');
-      Pw_FailureMessageTwo.classList.add('hide');
-    }
-    else if(pw_check(InputPassword.value) === false) {
-      Pw_FailureMessage.classList.add('hide');
-      Pw_FailureMessageTwo.classList.remove('hide');
     }
     else if(pw_Length(InputPassword.value) || pw_check(InputPassword.value)) {
       Pw_FailureMessage.classList.add('hide');
-      Pw_FailureMessageTwo.classList.add('hide');
     }
   }
   else {
     Pw_FailureMessage.classList.add('hide');
-    Pw_FailureMessageTwo.classList.add('hide');
   }
 }
 
