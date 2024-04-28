@@ -138,6 +138,11 @@ function getCookie(cname) {
   return "";
 }
 
+function closePopup(id, bool) {
+  document.getElementById(id).remove();
+  if (bool) setCookie(id, "no-longer-see");
+}
+
 function copy(val) {
   var dummy = document.createElement("textarea");
   document.body.appendChild(dummy);
