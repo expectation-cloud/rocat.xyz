@@ -3523,6 +3523,7 @@
 }
 
 .expectation-cloud-1aqgb0d {
+    cursor: default;
     margin-inline-end: auto;
     color: var(--waping-colors-secondaryGray-500);
     font-weight: var(--waping-fontWeights-normal);
@@ -3912,6 +3913,7 @@
 
 .expectation-cloud-zgydab {
     margin-inline-end: auto;
+    cursor: default;
     color: var(--waping-colors-gray-700);
     font-weight: var(--waping-fontWeights-bold);
 }
@@ -9533,7 +9535,7 @@
 }
 
 .expectation-cloud-8mta5o {
-    background: url("https://cdn.jsdelivr.net/gh/expectation-cloud/rocat.xyz@d497f10/assets/img/banner.png") 0% 0% / cover;
+    background: url("https://cdn.jsdelivr.net/gh/expectation-cloud/rocat.xyz@e30ffe4/assets/img/banner.png") 0% 0% / cover;
     border-radius: 16px;
     height: 131px;
     width: 100%;
